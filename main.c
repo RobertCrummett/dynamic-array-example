@@ -22,5 +22,7 @@ int main(void) {
 	}
 	darr_print(&array);
 
+	darr_free(&array);
+
 	return 0;
 }

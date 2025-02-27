@@ -76,6 +76,18 @@ int darr_grow(darr_t **array, int elem) {
 	return 0;
 }
 
+void darr_free(darr_t **array) {
+	if (array == NULL || *array == NULL)
+		return;
+
+	if ((*array)->data != NULL)
+		free((*array)->data);
+
+	free(*array);
+		
+	*array = NULL;
+}
+
 void darr_print(darr_t **array) {
 	printf("array{size=%zu, capacity=%zu, data=%p}\n", (*array)->size, (*array)->capacity, (*array)->data);
 }

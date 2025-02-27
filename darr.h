@@ -12,6 +12,7 @@ struct darr_t {
 
 extern int darr_malloc(darr_t **array, size_t size);
 extern int darr_realloc(darr_t **array, size_t size);
+extern void darr_free(darr_t **array);
 
 extern int darr_push(darr_t **array, int elem);
 extern int darr_grow(darr_t **array, int elem);
